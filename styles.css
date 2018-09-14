@@ -1,0 +1,45 @@
+* {
+    font-family: 'Inconsolata', monospace;
+    color: whitesmoke;
+}
+
+body {
+    background-color:lightskyblue;
+
+}
+
+.container {
+    width: 300px;
+    margin: 120px auto;
+}
+
+table {
+    width: 100%;
+    background-color: black;
+    border-collapse: collapse;
+
+
+}
+
+td {
+    width: 25%;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    background-color: black;
+    border: none;
+}
+
+#inputLabel {
+    height: 120px;
+    font-size: 40px;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 16px;
+    background-color: #000000
+}
