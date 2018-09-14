@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Here The Title</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inconsolata', monospace;
+            color: whitesmoke;
+        }
+
+        body {
+            background-color: #000000;
+
+        }
+
+        .container {
+            width: 300px;
+            margin: 120px auto;
+        }
+
+        table {
+            width: 100%;
+            background-color: black;
+            border-collapse: collapse;
+
+
+        }
+
+        td {
+            width: 25%;
+            border: 1px solid grey;
+            border-collapse: collapse;
+        }
+
+        button {
+            width: 100%;
+            height: 70px;
+            font-size: 24px;
+            background-color: black;
+            border: none;
+        }
+
+        #inputLabel {
+            height: 120px;
+            font-size: 40px;
+            vertical-align: bottom;
+            text-align: right;
+            padding-right: 16px;
+            background-color: #000000
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <table>
+
+            <tr>
+                <td colspan="4" id="inputLabel" style="color:green">0</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><button onclick="pushBtn(this);">AC</button> </td>
+                <td><button onclick="pushBtn(this);">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="pushBtn(this);">7</button></td>
+                <td><button onclick="pushBtn(this);">8</button></td>
+                <td><button onclick="pushBtn(this);">9</button></td>
+                <td><button onclick="pushBtn(this);">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="pushBtn(this);">4</button></td>
+                <td><button onclick="pushBtn(this);">5</button></td>
+                <td><button onclick="pushBtn(this);">6</button></td>
+                <td><button onclick="pushBtn(this);">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="pushBtn(this);">3</button></td>
+                <td><button onclick="pushBtn(this);">2</button></td>
+                <td><button onclick="pushBtn(this);">1</button></td>
+                <td><button onclick="pushBtn(this);">+</button></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button onclick="pushBtn(this);">0</button></td>
+                <td><button onclick="pushBtn(this);">.</button></td>
+                <td><button onclick="pushBtn(this);">=</button></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        var inputLabel = document.getElementById('inputLabel');
+
+        function pushBtn(obj) {
+            var pushed = obj.innerHTML;
+
+            if (pushed == '=') {
+                //calculate
+                inputLabel.innerHTML = eval(inputLabel.innerHTML);
+            } else if (pushed == 'AC') {
+                //all clear
+                inputLabel.innerHTML = '0';
+            } else {
+
+                if (inputLabel.innerHTML == '0') {
+                    inputLabel.innerHTML = pushed;
+                } else {
+                    inputLabel.innerHTML += pushed;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
