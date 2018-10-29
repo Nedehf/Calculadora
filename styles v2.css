@@ -1,4 +1,18 @@
-.calculator_keys{
+.calculator__keys {
     display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
     /*Other necessary CSS*/
+}
+
+.button_key {
+    background-color: azure;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+body {
+    background-color: aqua;
 }
